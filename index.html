@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=assistant:200,300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <h1>Cards</h1>
+
+    <my-component>
+      <h2 slot="title">Card One</h2>
+      <img slot="image" src="https://picsum.photos/400" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, omnis.</p>
+      <a href="#" slot="footer">Learn More</a>
+    </my-component>
+
+    <my-component>
+      <h2 slot="title">Card Two</h2>
+      <img slot="image" src="https://picsum.photos/401" alt="">
+      <p>Alias, quae voluptatem? Natus possimus eos unde consequuntur illo error accusantium ut!</p>
+      <a href="#" slot="footer">Learn More</a>
+    </my-component>
+
+    <my-component>
+      <h2 slot="title">Card Three</h2>
+      <img slot="image" src="https://picsum.photos/402" alt="">
+      <p>Incidunt blanditiis quaerat tempore vitae pariatur rerum in nam.</p>
+      <a href="#" slot="footer">Learn More</a>
+    </my-component>
+
+    <script>
+      document.querySelectorAll('a')
+        .forEach(a => {
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(e);
+          });
+        })
+    </script>
+
+    <script type="module" src="/component.js"></script>
+  </body>
+</html>
